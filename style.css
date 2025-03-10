@@ -42,7 +42,8 @@
   grid-column: 2 / 3;
   grid-row: 2 / (2 / 5);
   text-align: center;
-  background: linear-gradient(to right bottom, #000000, #272626f7);
+  /* background: linear-gradient(to right bottom, #000000, #272626f7); */
+  background: linear-gradient(to right bottom, #0239ff, #040054f7);
   border: 1px solid rgba(255, 255, 255, 0.751);
   border-radius: 1rem;
 }
@@ -53,4 +54,37 @@
   background: linear-gradient(to right bottom, #ffffff, #fffffff7);
   border: 1px solid rgba(255, 255, 255, 0.751);
   border-radius: 1rem;
+}
+
+.item3 {
+  grid-row: 1 / 5;
+  grid-column: 1 / (2/ 5);
+  background: linear-gradient(to right bottom, #ffffff, #fffffff7);
+  border: 1px solid rgba(255, 255, 255, 0.751);
+  padding: 20px;
+  border-radius: 1.5rem ;
+  width: 250px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 95%, 0% 85%);
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(86, 84, 84, 0.658);
+  border-radius: 0.3rem;
+  width: 200px;
+  height: 40px;
+  margin-top: 50px;
+}
+
+.html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(86, 84, 84, 0.658);
+  border-radius: 0.3rem;
+  width: 200px;
+  height: 40px;
+  margin-top: 120px;
 }
