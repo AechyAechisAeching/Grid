@@ -2,48 +2,96 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 2px solid red; */
 }
 
-
-  body {
+body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: x-large;
+  font-weight: bolder;
   min-height: 100vh;
-  /* background: linear-gradient(to top right, #fbb379, #2d83d8); */
-}
-
-.box {
-  background-color: rgb(0, 136, 255);
-  border-radius: 1rem;
+  background: linear-gradient(to top right, #ffffff, #ffffff);
+  overflow-y: auto;
 }
 
 .grid-container {
   display: grid;
-  grid-auto-columns: 200px;
-  grid-auto-rows: 200px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 300px);
   gap: 1em;
-  grid-template-areas:
-  "box-1 box-1"
-  "box-1 box-1";
-  
+  width: 100vw;
+  height: 100vh;
+  padding: 1em;
 }
-/* 
-@media (max-width: 56em) {
-  .grid-container{
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 136, 255);
+  border-radius: 1rem;
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.box:hover {
+  background-color: rgb(2, 110, 204);
+  transform: scale(1.01);
+}
+
+.grid-container {
   grid-template-areas:
-   "box-1 box-1 box-2"
-   "box-1 box-1 box-3"
-   "box-4 box-5 box-5";
+    "box-1 box-2 box-2"
+    "box-1 box-3 box-3"
+    "box-4 box-5 box-6"
+    "box-7 box-5 box-8"
+    "box-9 box-9 box-8";
+}
+
+@media (max-width: 56em) {
+  .grid-container {
+    grid-template-areas:
+      "box-1 box-1"
+      "box-2 box-3"
+      "box-4 box-5"
+      "box-6 box-6"
+      "box-7 box-8"
+      "box-9 box-9";
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 220px);
   }
 }
+
 @media(max-width: 42em){
   .grid-container{
     grid-template-areas:
-    "box-1 box-2"
-    "box-3 box-2"
+    "box-2 box-1"
+    "box-3 box-1"
     "box-3 box-4"
-    "box-5 box-4";
+    "box-5 box-4"
+    "box-6 box-7"
+    "box-8 box-7"
+    "box-9 box-9";
+    grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(9, 180px);
   }
-} */
+}
+
+
+@media(max-width: 28em){
+  .grid-container{
+    grid-template-areas:
+    "box-1"
+    "box-2"
+    "box-3"
+    "box-4"
+    "box-5"
+    "box-6"
+    "box-7"
+    "box-8"
+    "box-9";
+    grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(9, 180px);
+  }
+}
