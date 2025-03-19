@@ -11,7 +11,7 @@ body {
   font-size: x-large;
   font-weight: bolder;
   min-height: 100vh;
-  background: linear-gradient(to top right, #ffffff, #ffffff);
+  background: linear-gradient(to top right, #000000, #000000);
   overflow-y: auto;
 }
 
@@ -29,15 +29,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 136, 255);
-  border-radius: 1rem;
+  background: linear-gradient(to top left, rgba(255, 255, 255, 0.632), rgba(255, 255, 255, 0.275));
+  border-radius: 1.5rem;
   height: 100%;
   transition: 0.3s ease;
 }
 
 .box:hover {
-  background-color: rgb(2, 110, 204);
-  transform: scale(1.01);
+  background: linear-gradient(to top left, rgba(255, 255, 255, 0.632), rgba(255, 255, 255, 0.275));
+  transform: scale(1.03);
 }
 
 .grid-container {
@@ -58,6 +58,7 @@ body {
       "box-6 box-6"
       "box-7 box-8"
       "box-9 box-9";
+      gap: 0.5em;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(6, 220px);
   }
@@ -73,6 +74,7 @@ body {
     "box-6 box-7"
     "box-8 box-7"
     "box-9 box-9";
+    gap: 0.5em;
     grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(9, 180px);
   }
@@ -91,6 +93,7 @@ body {
     "box-7"
     "box-8"
     "box-9";
+    gap: 0.5em;
     grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(9, 180px);
   }
